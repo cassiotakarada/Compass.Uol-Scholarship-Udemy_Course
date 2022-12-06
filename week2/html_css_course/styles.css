@@ -1,5 +1,10 @@
 :root {
-    --accent-color: rgba(247, 77, 101, 0.9);
+    --gray-blue: #081524;
+    --dark-blue: #112d4e;
+    --blue: #1a4578;
+    --light-gold: #d8c691;
+    --dark-gold: #CBB26B;
+    --white: #ffff;
 }
 
 * {
@@ -11,7 +16,8 @@ body {
     display: grid;
     margin-inline: 0;
     margin-block: 0;
-    font-family: 'Fira Code', sans-serif;
+    font-family: 'Monteserrat', sans-serif;
+    background: linear-gradient(to left, var(--light-gold), var(--white));
 }
 
 h1, h2 {
@@ -37,7 +43,7 @@ nav {
     position: sticky;
     inset-inline-start: 0;
     top: 0; /* TODO: remove when fixed */
-    background-color: white;
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
 }
@@ -50,10 +56,15 @@ nav ul {
 }
 
 nav ul li {
-    margin-inline: .25rem;
+    margin-inline: 1.5rem;
     margin-block: 0;
-    line-height: 1.5rem;
+    line-height: 2.0rem;
     list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 main {
@@ -82,20 +93,22 @@ main > * {
 }
 
 #aboutme {
-    background-color: black;
+    background-color: var(--gray-blue);
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.5em;
 }
 
 #aboutme h2 {
     color: white;
+    text-align: center;
 }
 
 #aboutme footer {
-    text-align: justify;
+    text-align: center;
 }
 
 #aboutme footer a, #aboutme footer a:visited, #aboutme footer a:hover {
@@ -104,7 +117,7 @@ main > * {
 
 #aboutme aside {
     order: 10;
-    text-align: justify;
+    text-align: center;
 }
 
 #portfolio {
@@ -114,7 +127,7 @@ main > * {
                                 "anchor img1";
     grid-gap: 10px;
     align-items: end;
-    background-color: var(--accent-color);
+    background-color: var(--dark-blue);
     padding-block: 1rem;
 }
 
@@ -122,6 +135,7 @@ main > * {
     grid-area: portfolio;
     align-self: start;
     margin-block: 0;
+    color: var(--dark-gold);
 }
 
 #portfolio img {
@@ -204,13 +218,14 @@ img.anchor {
 }
 
 .button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--dark-blue);
     transition: background-color .5s;
 }
 
 .my-picture {
-    max-inline-size: 75px;
+    max-inline-size: 100px;
     margin-inline-end: 0;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -219,8 +234,8 @@ img.anchor {
     }
 
     #aboutme {
-        justify-content: initial;
-        text-align: initial;
+        justify-content: center;
+        text-align: justify;
     }
 
     .my-picture {
@@ -253,4 +268,13 @@ img.anchor {
     #contactme {
         display: none;
     }
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: 'Dosis';
+    height: 100%;
+    align-items: center;
+    align-content: center;
 }
