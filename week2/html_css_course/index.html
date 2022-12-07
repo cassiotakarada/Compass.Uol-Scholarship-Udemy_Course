@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Resume of Cassio Takarada</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="./favicons/favicon-16x16.png">
+        <link rel="icon" href="./images/favicon-16x16.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Montserrat&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
     </head>
     <body>
         <nav>
+            <img src="./images/logoNomeBranco.png" alt="Currently working on." class="center"/>
             <ul>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#services">Services</a></li>
@@ -24,21 +25,21 @@
             </ul>
         </nav>
         <main>
-            <h1>Resume</h1>
+            <h1 id="home">Resume</h1>
             <section>
                 <h2>Cassio Takarada</h2>
                 <p>
                     Coder and Learner → Changing Careers
                 </p>
                 <ul>
-                    <li>Website</li>
-                    <dd><a href="https://github.com/cassiotakarada">GitHub</a></dd><br>
-                    <li>Phone</li>
-                    <dd>+55 16 9 8222 1415</dd><br>
+                    <li><img src="images/github.png" class="social_logo" /> Website</li>
+                    <dd><a href="https://github.com/cassiotakarada" class="listA">GitHub</a></dd><br>
+                    <li><img src="images/phone.png" class="social_logo" /> Phone</li>
+                    <dd><a href="https://wa.me/5516982221415" class="listA">+55 16 9 8222 1415</a></dd><br>
                     <li><img src="images/twitter.svg" class="social_logo" /> Twitter</li>
-                    <dd><a href="https://twitter.com/cassiotakarada">@cassiotakarada</a></dd><br>
+                    <dd><a href="https://twitter.com/cassiotakarada" class="listA">@cassiotakarada</a></dd><br>
                     <li><img src="images/linkedin.png" class="social_logo" /> LinkedIn</li>
-                    <dd><a href="https://youtube.com/tonyalicea">TonyAlicea</a></dd>
+                    <dd><a href="https://www.linkedin.com/in/cassiosilvatakarada7/" class="listA">Cassio Takarada</a></dd>
                 </ul>
             </section>
 
@@ -54,9 +55,9 @@
                     I am also devoted to making sure that our kids education gets a little bit better everyday. Therefore, gathering technology and education, I've became a partner at Codigo Kid - Franca.
                 </p>
                 <aside class="motto"><blockquote><p><small>“All we have to decide is what to do with the time that is given to us.” – Gandalf.</small></blockquote></p></aside>
-                <footer>
-                    <a href="#contactme">Contact me</a>
-                </footer>
+                <p>
+                    <a href="https://wa.me/5516982221415">Click here to contact me</a>
+                </p>
             </article>
 
             <section id="services">
@@ -114,14 +115,23 @@
                 </ol>
             </section>
 
-            <section id="portfolio" class="full-bleed">
+            <div id="portfolio" class="full-bleed">
                 <h2>Portfolio</h2>
-                    <img src="./images/gabi.gif" alt="Currently working on." />
-                    <img src="./images/franburger-gif.gif" class="anchor" alt="My first project at School." />
-                    <img src="./images/mario.gif" alt="Web developed Mario Game." />
-                    <img src="./images/pokedex.gif" alt="Pokedex using a API." />
-                    <img src="./images/projetoPronto.png" alt="LOL Login Page." />
-            </section>
+                    <div class="currentProject">
+                        <p>Current Project</p>
+                        <img src="./images/gabi.gif" alt="Currently working on." />
+                    </div>
+                    <div class="divMor">
+                        <div class="div1">
+                        <img src="./images/franburger-gif.gif" class="anchor" alt="My first project at School." />
+                        <img src="./images/mario.gif" alt="Web developed Mario Game." style="margin-left:20px"/>
+                        </div><br>
+                        <div class="div2">
+                            <img src="./images/pokedex.gif" alt="Pokedex using a API." />
+                            <img src="./images/projetoPronto.png" alt="LOL Login Page." style="margin-left:20px"/>
+                        </div>
+                    </div>
+                </div>
 
             <section id="testimonials">
                 <h2 class="flex-header">Learning New Technologies & Frameworks</h2>
@@ -143,11 +153,16 @@
                     Brazil, Franca - SP, 14.405-146
                 </address>
             </section>
-        </main>
-        <section id="contactme">
-            <footer>
-                <h3>Contact Me</h3>
+        </main><br><br>
+            <footer class="conteudos-rodape">
+                <div class="conteudos-rodape-escrito">
+                    <a href="#home" class="footerA"><p class="conteudos-rodape-escrito-titulo">Cássio Takarada ©.</p></a>
+                </div>
+                <div class="bloco-imagens">
+                    <a href="https://wa.me/5516982221415"><img class="conteudos-rodape-imagem" src="./images/whatsapp.png" alt="Whatsapp"></a>
+                    <a href="https://github.com/cassiotakarada"><img class="conteudos-rodape-imagem" src="./images/github.png" alt="FB"></a>
+                    <a href="https://www.instagram.com/cassiotakarada/"><img class="conteudos-rodape-imagem" src="./images/instagram.png" alt="IG"></a>
+                </div>
             </footer>
-        </section>
     </body>
 </html>
