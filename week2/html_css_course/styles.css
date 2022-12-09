@@ -56,15 +56,19 @@ nav ul {
 }
 
 nav ul li {
-    margin-inline: 1.5rem;
+    margin-inline: 1.0rem;
     margin-block: 0;
-    line-height: 2.0rem;
+    line-height: 1.5rem;
     list-style: none;
 }
 
 nav a {
     text-decoration: none;
     color: var(--white);
+}
+
+nav li {
+    color: white;
 }
 
 main {
@@ -112,23 +116,18 @@ main > * {
 }
 
 .divMor {
-    margin-left:20%;
-    margin-top: 40%;
-    align-items: center;
+    width: 100%;
+    margin-top: 20%;
 }
 
 .div1 {
-    width: 250px;
-    position:static;
+    width: 100%;
     display: flex;
-    background-color: #000000;
 }
 
 .div2 {
-    width: 250px;
-    position:static;
+    width: 100%;
     display: flex;
-    background-color: #000000;
 }
 
 #aboutme {
@@ -164,11 +163,12 @@ main > * {
     grid-template: 1fr / 1fr 1fr;
     grid-template-areas:    "portfolio portfolio"
                                 "anchor img1";
-    grid-gap: 10px;
+    grid-gap: 40px;
     align-items: initial;
     background-color: var(--dark-blue);
     padding-block: 1rem;
-    height: 500px;
+    height: 600px;
+    width: 100%;
 }
 
 #portfolio h2 {
@@ -355,7 +355,7 @@ footer p{
     font-size:20px;
     display:inline-block;
     line-height:35px;
-    height:30px;
+    height:20px;
     text-align:right;
     margin-right:20px;
     border-radius:100%;
