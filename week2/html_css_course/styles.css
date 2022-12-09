@@ -1,5 +1,10 @@
 :root {
-    --accent-color: rgba(247, 77, 101, 0.9);
+    --gray-blue: #081524;
+    --dark-blue: #112d4e;
+    --blue: #1a4578;
+    --light-gold: #d8c691;
+    --dark-gold: #CBB26B;
+    --white: #ffff;
 }
 
 * {
@@ -11,7 +16,8 @@ body {
     display: grid;
     margin-inline: 0;
     margin-block: 0;
-    font-family: 'Fira Code', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
+    background: linear-gradient(to left, var(--light-gold), var(--white));
 }
 
 h1, h2 {
@@ -30,14 +36,14 @@ h2 {
 }
 
 input, select, textarea {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
 }
 
 nav {
     position: sticky;
     inset-inline-start: 0;
     top: 0; /* TODO: remove when fixed */
-    background-color: white;
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
 }
@@ -50,10 +56,19 @@ nav ul {
 }
 
 nav ul li {
-    margin-inline: .25rem;
+    margin-inline: 1.0rem;
     margin-block: 0;
     line-height: 1.5rem;
     list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav li {
+    color: white;
 }
 
 main {
@@ -66,6 +81,15 @@ main {
 
 main > * {
     grid-column: 2;
+}
+
+.center {
+    width: 130px;
+    height: 40px;
+    display: block;
+    margin-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .social_logo {
@@ -81,21 +105,48 @@ main > * {
     flex-basis: 100%;
 }
 
+.listA {
+    text-decoration:underline;
+    color: #000000;
+}
+
+.currentProject {
+    color: white;
+    text-align: center;
+}
+
+.divMor {
+    width: 100%;
+    margin-top: 20%;
+}
+
+.div1 {
+    width: 100%;
+    display: flex;
+}
+
+.div2 {
+    width: 100%;
+    display: flex;
+}
+
 #aboutme {
-    background-color: black;
+    background-color: var(--gray-blue);
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.5em;
 }
 
 #aboutme h2 {
     color: white;
+    text-align: center;
 }
 
 #aboutme footer {
-    text-align: justify;
+    text-align: center;
 }
 
 #aboutme footer a, #aboutme footer a:visited, #aboutme footer a:hover {
@@ -104,7 +155,7 @@ main > * {
 
 #aboutme aside {
     order: 10;
-    text-align: justify;
+    text-align: center;
 }
 
 #portfolio {
@@ -112,16 +163,19 @@ main > * {
     grid-template: 1fr / 1fr 1fr;
     grid-template-areas:    "portfolio portfolio"
                                 "anchor img1";
-    grid-gap: 10px;
-    align-items: end;
-    background-color: var(--accent-color);
+    grid-gap: 40px;
+    align-items: initial;
+    background-color: var(--dark-blue);
     padding-block: 1rem;
+    height: 600px;
+    width: 100%;
 }
 
 #portfolio h2 {
     grid-area: portfolio;
-    align-self: start;
+    align-self: center;
     margin-block: 0;
+    color: var(--white);
 }
 
 #portfolio img {
@@ -196,7 +250,7 @@ img.anchor {
 .button {
     background-color: #000000;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'JetBrains Mono', sans-serif;
     padding-inline: 1rem;
     padding-block: .5rem;
     border-inline: none;
@@ -204,13 +258,14 @@ img.anchor {
 }
 
 .button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--dark-blue);
     transition: background-color .5s;
 }
 
 .my-picture {
-    max-inline-size: 75px;
+    max-inline-size: 100px;
     margin-inline-end: 0;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -219,8 +274,8 @@ img.anchor {
     }
 
     #aboutme {
-        justify-content: initial;
-        text-align: initial;
+        justify-content: center;
+        text-align: justify;
     }
 
     .my-picture {
@@ -253,4 +308,62 @@ img.anchor {
     #contactme {
         display: none;
     }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+}
+footer p{
+    padding: 5px;
+    color: #fff;
+    font-family: 'JetBrains Mono';
+}
+
+.conteudos-rodape-escrito-titulo {
+    margin-top: 10px;
+    padding-left: 10px;
+    font-family: 'JetBrains Mono';
+}
+
+.conteudos-rodape-escrito {
+    width: 85%;
+}
+
+.conteudos-rodape-escrito > p {
+    text-align: justify;
+    align-items: center;
+    margin-left: 1%;
+    font-family: 'JetBrains Mono';
+    font-size: 20px;
+    color: white;
+}
+
+.bloco-imagens {
+    margin-top: 12.5px;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.bloco-imagens > a > img{
+    background-color: var(--blue);
+    color: white;
+    font-size:20px;
+    display:inline-block;
+    line-height:35px;
+    height:20px;
+    text-align:right;
+    margin-right:20px;
+    border-radius:100%;
+    -webkit-transition:all .3s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
+
+.footerA {
+    text-decoration: none;
 }
